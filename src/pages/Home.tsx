@@ -47,6 +47,24 @@ const expertise = [
   },
 ];
 
+const experiences = [
+  {
+    title: "Community Investment Initiative",
+    description: "Managed a multi-sector community investment strategy coordinating public, philanthropic, and private capital to strengthen neighborhood economies in underserved corridors.",
+  },
+  {
+    title: "Small Business Ecosystem Research",
+    description: "Led research examining small business support systems across multiple districts, producing actionable recommendations for strengthening local entrepreneurship infrastructure.",
+  },
+  {
+    title: "Economic Development Strategic Plan",
+    description: "Developed a comprehensive economic development framework for a municipal planning department, integrating market analysis, stakeholder input, and investment prioritization.",
+  },
+  {
+    title: "Cross-Sector Policy Collaboration",
+    description: "Facilitated partnerships between government agencies, university research centers, and community organizations to align economic development policy with neighborhood priorities.",
+  },
+];
 
 const Home = () => {
   return (
@@ -158,6 +176,25 @@ const Home = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Selected Experience */}
+      <section className="py-28 lg:py-36">
+        <div className="container mx-auto px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">Applied Experience</p>
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16">
+            Selected Work
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {experiences.map((exp, i) => (
+              <div key={i} className="bg-card p-8 rounded-2xl shadow-card">
+                <div className="w-10 h-1 rounded-full bg-terracotta mb-6" />
+                <h3 className="font-display text-xl text-foreground mb-3">{exp.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
               </div>
             ))}
           </div>

@@ -44,25 +44,6 @@ const clientTypes = [
   { category: "Private Sector & Development", image: "/placeholder.svg", items: ["Real estate developers", "Economic impact analysts", "Incentives navigation"] },
 ];
 
-const selectedWork = [
-  {
-    title: "Community Investment Initiative",
-    description: "Managed a multi-sector community investment strategy coordinating public, philanthropic, and private capital to strengthen neighborhood economies in underserved corridors.",
-  },
-  {
-    title: "Small Business Ecosystem Research",
-    description: "Led research examining small business support systems across multiple districts, producing actionable recommendations for strengthening local entrepreneurship infrastructure.",
-  },
-  {
-    title: "Economic Development Strategic Plan",
-    description: "Developed a comprehensive economic development framework for a municipal planning department, integrating market analysis, stakeholder input, and investment prioritization.",
-  },
-  {
-    title: "Cross-Sector Policy Collaboration",
-    description: "Facilitated partnerships between government agencies, university research centers, and community organizations to align economic development policy with neighborhood priorities.",
-  },
-];
-
 const inquiryTypes = ["General Inquiry", "Project Scoping", "Speaking Request", "Media", "Other"];
 const referralSources = ["Referral", "LinkedIn", "Web Search", "Conference", "Other"];
 
@@ -266,25 +247,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Selected Work */}
-      <section className="py-20 lg:py-28 bg-secondary">
-        <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4">Applied Experience</p>
-          <h2 className="font-display text-2xl md:text-3xl text-foreground mb-10">
-            Selected Work
-          </h2>
-          <div className="grid md:grid-cols-2 gap-5">
-            {selectedWork.map((project, i) => (
-              <div key={i} className="bg-background p-6 rounded-xl shadow-card">
-                <div className="w-8 h-1 rounded-full bg-terracotta mb-4" />
-                <h3 className="font-display text-base text-foreground mb-2">{project.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* Contact */}
       <section id="contact" className="py-28 lg:py-36 bg-secondary">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto">
