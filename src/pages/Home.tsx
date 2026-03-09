@@ -151,27 +151,27 @@ const Home = () => {
       </section>
 
       {/* Areas of Work */}
-      <section className="py-28 lg:py-36 bg-secondary">
-        <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5 text-center">Areas of Work</p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-16">
+      <section className="py-14 lg:py-18 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-3 text-center">Areas of Work</p>
+          <h2 className="font-display text-2xl md:text-3xl text-foreground text-center mb-10">
             Core Focus Areas
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {expertise.map((area) => (
               <div
                 key={area.title}
-                className="bg-background p-8 rounded-2xl shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
+                className="bg-background p-5 rounded-xl shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center mb-6">
-                  <area.icon className="text-terracotta" size={24} strokeWidth={1.5} />
+                <div className="w-9 h-9 rounded-lg bg-terracotta/10 flex items-center justify-center mb-4">
+                  <area.icon className="text-terracotta" size={18} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-lg text-foreground mb-3">{area.title}</h3>
-                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">{area.description}</p>
-                <ul className="space-y-2.5">
+                <h3 className="font-display text-sm text-foreground mb-2">{area.title}</h3>
+                <p className="text-muted-foreground text-xs mb-3 leading-relaxed">{area.description}</p>
+                <ul className="space-y-1.5">
                   {area.items.map((item) => (
-                    <li key={item} className="text-sm text-muted-foreground flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
+                    <li key={item} className="text-xs text-muted-foreground flex items-start gap-2">
+                      <span className="w-1 h-1 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
                       {item}
                     </li>
                   ))}
