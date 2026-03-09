@@ -219,6 +219,34 @@ Projects display in alternating left/right layouts with image placeholders.
 
 ---
 
+## Blog Page
+**File:** `src/pages/Blog.tsx`
+**Route:** `/blog`
+**Status:** ⚠️ **UNPUBLISHED** — not in the nav, accessible only via direct URL.
+
+### Posts Data
+Edit the `posts` array. Each post object has:
+
+| Field | Description |
+|-------|-------------|
+| `slug` | URL-friendly identifier |
+| `title` | Post headline |
+| `excerpt` | Short summary paragraph |
+| `date` | Publication date (YYYY-MM-DD) |
+| `readTime` | Estimated read time string |
+| `category` | Category tag (`Strategy`, `Planning`, `Equity`, `Finance`) |
+
+### Category Colors
+Edit the `categoryColors` object to change badge colors per category.
+
+### Bottom CTA
+| Item | Current Value |
+|------|---------------|
+| Heading | `Want to Discuss an Idea?` |
+| CTA link | `/services#contact` |
+
+---
+
 ## Portfolio Page
 **File:** `src/pages/portfolio/Portfolio.tsx`
 **Status:** ⚠️ **UNPUBLISHED** — has a route file but may overlap with Selected Work page.
