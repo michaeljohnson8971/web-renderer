@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    slug: "community-investment-initiative",
     title: "Community Investment Initiative",
     client: "Municipal Planning Department",
     year: "2024",
