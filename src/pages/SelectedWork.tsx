@@ -46,6 +46,7 @@ const projects = [
     ],
   },
   {
+    slug: "cross-sector-policy-collaboration",
     title: "Cross-Sector Policy Collaboration",
     client: "University Policy Center",
     year: "2022",
