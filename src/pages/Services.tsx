@@ -92,20 +92,20 @@ const Services = () => {
       </section>
 
       {/* Services */}
-      <section className="py-28 lg:py-36">
+      <section className="py-20 lg:py-24">
         <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">Consulting Services</p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4">Consulting Services</p>
+          <h2 className="font-display text-2xl md:text-3xl text-foreground mb-10">
             Service Areas
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((service) => (
-              <div key={service.title} className="bg-card p-5 rounded-xl shadow-card">
-                <h3 className="font-display text-base text-foreground mb-3">{service.title}</h3>
-                <ul className="space-y-3">
+              <div key={service.title} className="bg-card p-4 rounded-xl shadow-card">
+                <h3 className="font-display text-sm text-foreground mb-2">{service.title}</h3>
+                <ul className="space-y-2">
                   {service.items.map((item) => (
-                    <li key={item} className="text-muted-foreground text-sm flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
+                    <li key={item} className="text-muted-foreground text-xs flex items-start gap-2">
+                      <span className="w-1 h-1 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
                       {item}
                     </li>
                   ))}
