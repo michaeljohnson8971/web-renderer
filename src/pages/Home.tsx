@@ -126,11 +126,11 @@ const Home = () => {
       </section>
 
       {/* Professional Overview */}
-      <section className="py-28 lg:py-36">
+      <section className="py-7 lg:py-9">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">About</p>
-            <h2 className="font-display text-3xl md:text-4xl text-foreground leading-tight mb-8">
+            <h2 className="font-display text-2xl md:text-3xl text-foreground leading-tight mb-8">
                DABL Studio
             </h2>
             <p className="text-muted-foreground leading-[1.8] text-lg mb-6">
@@ -140,7 +140,7 @@ const Home = () => {
               With experience spanning public, nonprofit, and institutional settings, DABL Studio builds partnerships between government agencies, philanthropic organizations, and community stakeholders to develop inclusive economic growth strategies. Our approach is grounded in rigorous research, participatory engagement, and a commitment to equitable outcomes.
             </p>
             <Link
-              to="/services"
+              to="/services#services"
               className="inline-flex items-center gap-2 text-terracotta font-medium text-sm hover:underline underline-offset-4"
             >
               Learn more about services
@@ -151,27 +151,27 @@ const Home = () => {
       </section>
 
       {/* Areas of Work */}
-      <section className="py-28 lg:py-36 bg-secondary">
-        <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5 text-center">Areas of Work</p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground text-center mb-16">
+      <section className="py-8 lg:py-10 bg-secondary">
+        <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-terracotta mb-2 text-center">Areas of Work</p>
+          <h2 className="font-display text-lg md:text-xl text-foreground text-center mb-6">
             Core Focus Areas
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2.5">
             {expertise.map((area) => (
               <div
                 key={area.title}
-                className="bg-background p-8 rounded-2xl shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
+                className="bg-background p-4 rounded-xl shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center mb-6">
-                  <area.icon className="text-terracotta" size={24} strokeWidth={1.5} />
+                <div className="w-9 h-9 rounded-lg bg-terracotta/10 flex items-center justify-center mb-3">
+                  <area.icon className="text-terracotta" size={18} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-lg text-foreground mb-3">{area.title}</h3>
-                <p className="text-muted-foreground text-sm mb-5 leading-relaxed">{area.description}</p>
-                <ul className="space-y-2.5">
+                <h3 className="font-display text-sm text-foreground mb-1.5">{area.title}</h3>
+                <p className="text-muted-foreground text-xs mb-3 leading-relaxed">{area.description}</p>
+                <ul className="space-y-1.5">
                   {area.items.map((item) => (
-                    <li key={item} className="text-sm text-muted-foreground flex items-start gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
+                    <li key={item} className="text-xs text-muted-foreground flex items-start gap-2">
+                      <span className="w-1 h-1 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -191,10 +191,15 @@ const Home = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {experiences.map((exp, i) => (
-              <div key={i} className="bg-card p-8 rounded-2xl shadow-card">
-                <div className="w-10 h-1 rounded-full bg-terracotta mb-6" />
-                <h3 className="font-display text-xl text-foreground mb-3">{exp.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
+              <div key={i} className="bg-card rounded-2xl shadow-card overflow-hidden">
+                <div className="aspect-[16/9] bg-muted flex items-center justify-center">
+                  <span className="text-muted-foreground text-sm">Image Placeholder</span>
+                </div>
+                <div className="p-8">
+                  <div className="w-10 h-1 rounded-full bg-terracotta mb-6" />
+                  <h3 className="font-display text-xl text-foreground mb-3">{exp.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
+                </div>
               </div>
             ))}
           </div>
