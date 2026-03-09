@@ -4,58 +4,58 @@ import communityImg from "@/assets/community-engagement.jpg";
 import profileImg from "@/assets/about-profile.jpg";
 
 const credentials = [
-  {
-    icon: GraduationCap,
-    title: "Education",
-    items: [
-      "Master of Public Administration — Economic Development & Urban Policy",
-      "Bachelor of Arts — Political Science & Economics",
-    ],
-  },
-  {
-    icon: Award,
-    title: "Professional Background",
-    items: [
-      "Economic development strategy & research",
-      "Community investment initiative management",
-      "Public-nonprofit-institutional partnerships",
-      "Small business ecosystem analysis",
-    ],
-  },
-  {
-    icon: MapPin,
-    title: "Sector Experience",
-    items: [
-      "Municipal planning & economic development departments",
-      "Community development organizations",
-      "Philanthropy & research institutions",
-      "University-based policy centers",
-    ],
-  },
-];
+{
+  icon: GraduationCap,
+  title: "Education",
+  items: [
+  "Master of Public Administration — Economic Development & Urban Policy",
+  "Bachelor of Arts — Political Science & Economics"]
+
+},
+{
+  icon: Award,
+  title: "Professional Background",
+  items: [
+  "Economic development strategy & research",
+  "Community investment initiative management",
+  "Public-nonprofit-institutional partnerships",
+  "Small business ecosystem analysis"]
+
+},
+{
+  icon: MapPin,
+  title: "Sector Experience",
+  items: [
+  "Municipal planning & economic development departments",
+  "Community development organizations",
+  "Philanthropy & research institutions",
+  "University-based policy centers"]
+
+}];
+
 
 const values = [
-  {
-    title: "Evidence-Based Strategy",
-    description:
-      "Every recommendation is grounded in rigorous research and data analysis — not assumptions. We believe sound strategy starts with understanding the landscape.",
-  },
-  {
-    title: "Community-Centered Approach",
-    description:
-      "Lasting economic development requires the voices and priorities of community stakeholders at every stage, from research design through implementation.",
-  },
-  {
-    title: "Collaborative Partnerships",
-    description:
-      "The most impactful initiatives are built across sectors. We bring together government, philanthropy, nonprofits, and institutions to achieve shared goals.",
-  },
-  {
-    title: "Equitable Outcomes",
-    description:
-      "We design strategies intentionally focused on expanding opportunity in historically underserved communities and strengthening neighborhood economies.",
-  },
-];
+{
+  title: "Evidence-Based Strategy",
+  description:
+  "Every recommendation is grounded in rigorous research and data analysis — not assumptions. We believe sound strategy starts with understanding the landscape."
+},
+{
+  title: "Community-Centered Approach",
+  description:
+  "Lasting economic development requires the voices and priorities of community stakeholders at every stage, from research design through implementation."
+},
+{
+  title: "Collaborative Partnerships",
+  description:
+  "The most impactful initiatives are built across sectors. We bring together government, philanthropy, nonprofits, and institutions to achieve shared goals."
+},
+{
+  title: "Equitable Outcomes",
+  description:
+  "We design strategies intentionally focused on expanding opportunity in historically underserved communities and strengthening neighborhood economies."
+}];
+
 
 const About = () => {
   return (
@@ -132,73 +132,73 @@ const About = () => {
             Credentials & Experience
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {credentials.map((cred) => (
-              <div
-                key={cred.title}
-                className="bg-background p-8 rounded-2xl shadow-card"
-              >
+            {credentials.map((cred) =>
+            <div
+              key={cred.title}
+              className="bg-background p-8 rounded-2xl shadow-card">
+              
                 <div className="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center mb-6">
                   <cred.icon
-                    className="text-terracotta"
-                    size={24}
-                    strokeWidth={1.5}
-                  />
+                  className="text-terracotta"
+                  size={24}
+                  strokeWidth={1.5} />
+                
                 </div>
                 <h3 className="font-display text-lg text-foreground mb-5">
                   {cred.title}
                 </h3>
                 <ul className="space-y-3">
-                  {cred.items.map((item) => (
-                    <li
-                      key={item}
-                      className="text-muted-foreground text-sm flex items-start gap-3"
-                    >
+                  {cred.items.map((item) =>
+                <li
+                  key={item}
+                  className="text-muted-foreground text-sm flex items-start gap-3">
+                  
                       <span className="w-1.5 h-1.5 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
                       {item}
                     </li>
-                  ))}
+                )}
                 </ul>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-28 lg:py-36">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">
-                Guiding Principles
-              </p>
-              <h2 className="font-display text-3xl md:text-4xl text-foreground mb-6">
-                What Drives Our Work
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                These values inform every engagement — from how we approach
-                research to how we build partnerships and design strategies.
-              </p>
-              <div className="w-full aspect-video rounded-2xl shadow-card bg-muted flex items-center justify-center">
-                <span className="text-muted-foreground text-sm">Image Placeholder</span>
-              </div>
-            </div>
-            <div className="space-y-6">
-              {values.map((value, i) => (
-                <div key={i} className="bg-card p-8 rounded-2xl shadow-card">
-                  <div className="w-10 h-1 rounded-full bg-terracotta mb-5" />
-                  <h3 className="font-display text-lg text-foreground mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
       {/* CTA */}
       <section className="py-28 lg:py-36 bg-primary">
@@ -212,15 +212,15 @@ const About = () => {
           </p>
           <Link
             to="/services#contact"
-            className="inline-flex items-center gap-2.5 bg-terracotta text-accent-foreground px-10 py-4 rounded-full font-medium hover:bg-terracotta-light transition-all shadow-elevated"
-          >
+            className="inline-flex items-center gap-2.5 bg-terracotta text-accent-foreground px-10 py-4 rounded-full font-medium hover:bg-terracotta-light transition-all shadow-elevated">
+            
             Get in Touch
             <ArrowRight size={16} />
           </Link>
         </div>
       </section>
-    </main>
-  );
+    </main>);
+
 };
 
 export default About;
