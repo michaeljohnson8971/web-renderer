@@ -181,11 +181,9 @@ const About = () => {
                 These values inform every engagement — from how we approach
                 research to how we build partnerships and design strategies.
               </p>
-              <img
-                src={communityImg}
-                alt="Community engagement and collaborative planning"
-                className="w-full aspect-video object-cover rounded-2xl shadow-card"
-              />
+              <div className="w-full aspect-video rounded-2xl shadow-card bg-muted flex items-center justify-center">
+                <span className="text-muted-foreground text-sm">Image Placeholder</span>
+              </div>
             </div>
             <div className="space-y-6">
               {values.map((value, i) => (
