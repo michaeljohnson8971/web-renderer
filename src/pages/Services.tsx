@@ -80,14 +80,23 @@ const Services = () => {
       {/* Hero */}
       <section className="relative py-20 lg:py-24 bg-secondary">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4">Work & Services</p>
-            <h1 className="font-display text-3xl md:text-4xl text-foreground leading-tight mb-4">
-              How We Work
-            </h1>
-            <p className="text-muted-foreground text-base leading-relaxed">
-              We provide strategic consulting across economic development, community investment, small business ecosystems, and policy — from initial research through implementation support.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="max-w-xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4">Work & Services</p>
+              <h1 className="font-display text-3xl md:text-4xl text-foreground leading-tight mb-4">
+                How We Work
+              </h1>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                We provide strategic consulting across economic development, community investment, small business ecosystems, and policy — from initial research through implementation support.
+              </p>
+            </div>
+            <div>
+              <img
+                src={heroImg}
+                alt="Chicago skyline"
+                className="w-full aspect-[4/3] object-cover rounded-xl shadow-card"
+              />
+            </div>
           </div>
         </div>
       </section>
