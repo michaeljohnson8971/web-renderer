@@ -161,17 +161,17 @@ const Home = () => {
             {expertise.map((area) => (
               <div
                 key={area.title}
-                className="bg-background p-3 rounded-lg shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
+                className="bg-background p-4 rounded-xl shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-7 h-7 rounded-md bg-terracotta/10 flex items-center justify-center mb-2.5">
-                  <area.icon className="text-terracotta" size={14} strokeWidth={1.5} />
+                <div className="w-9 h-9 rounded-lg bg-terracotta/10 flex items-center justify-center mb-3">
+                  <area.icon className="text-terracotta" size={18} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-xs text-foreground mb-1">{area.title}</h3>
-                <p className="text-muted-foreground text-[10px] mb-2 leading-relaxed">{area.description}</p>
-                <ul className="space-y-1">
+                <h3 className="font-display text-sm text-foreground mb-1.5">{area.title}</h3>
+                <p className="text-muted-foreground text-xs mb-3 leading-relaxed">{area.description}</p>
+                <ul className="space-y-1.5">
                   {area.items.map((item) => (
-                    <li key={item} className="text-[10px] text-muted-foreground flex items-start gap-1.5">
-                      <span className="w-0.5 h-0.5 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
+                    <li key={item} className="text-xs text-muted-foreground flex items-start gap-2">
+                      <span className="w-1 h-1 rounded-full bg-terracotta/50 mt-1.5 shrink-0" />
                       {item}
                     </li>
                   ))}
