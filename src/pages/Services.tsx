@@ -92,7 +92,7 @@ const Services = () => {
       </section>
 
       {/* Services */}
-      <section className="py-20 lg:py-24">
+      <section className="py-5 lg:py-6">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4">Consulting Services</p>
           <h2 className="font-display text-2xl md:text-3xl text-foreground mb-10">
