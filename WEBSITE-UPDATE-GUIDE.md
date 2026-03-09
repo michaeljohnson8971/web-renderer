@@ -203,12 +203,15 @@ Edit the `projects` array. Each project object has:
 
 | Field | Description |
 |-------|-------------|
+| `slug` | Unique ID used for deep-linking from Home page |
 | `title` | Project name |
 | `client` | Client/partner name |
 | `year` | Year completed |
 | `category` | Category tag |
 | `description` | Project summary paragraph |
 | `outcomes` | Array of key outcome bullet points |
+
+Home page project cards link to `/work#{slug}` and auto-scroll to the matching project.
 
 Projects display in alternating left/right layouts with image placeholders.
 
