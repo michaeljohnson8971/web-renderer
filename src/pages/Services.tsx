@@ -117,23 +117,23 @@ const Services = () => {
       </section>
 
       {/* Engagement Models */}
-      <section className="py-16 lg:py-20 bg-secondary">
+      <section className="py-10 lg:py-14 bg-secondary">
         <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4 text-center">Engagement</p>
-          <h2 className="font-display text-2xl md:text-3xl text-foreground text-center mb-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-3 text-center">Engagement</p>
+          <h2 className="font-display text-xl md:text-2xl text-foreground text-center mb-3">
             How We Can Work Together
           </h2>
-          <p className="text-muted-foreground text-sm text-center max-w-xl mx-auto mb-10">
+          <p className="text-muted-foreground text-xs text-center max-w-lg mx-auto mb-7">
             Every engagement is tailored to the scope and needs of the project. Here are three common models.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-3">
             {engagementModels.map((model) => (
-              <div key={model.title} className="bg-background p-5 rounded-xl shadow-card text-center">
-                <div className="w-10 h-10 rounded-xl bg-terracotta/10 flex items-center justify-center mx-auto mb-4">
-                  <model.icon className="text-terracotta" size={18} strokeWidth={1.5} />
+              <div key={model.title} className="bg-background p-4 rounded-lg shadow-card text-center">
+                <div className="w-8 h-8 rounded-lg bg-terracotta/10 flex items-center justify-center mx-auto mb-3">
+                  <model.icon className="text-terracotta" size={14} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display text-base text-foreground mb-2">{model.title}</h3>
-                <p className="text-muted-foreground text-xs leading-relaxed">{model.description}</p>
+                <h3 className="font-display text-sm text-foreground mb-1.5">{model.title}</h3>
+                <p className="text-muted-foreground text-[10px] leading-relaxed">{model.description}</p>
               </div>
             ))}
           </div>
