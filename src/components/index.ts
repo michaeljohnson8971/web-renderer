@@ -1,3 +1,3 @@
-export { default as Footer } from "./Footer";
-export { default as Header } from "./Header";
-export { default as NavLink } from "./NavLink";
+export { Footer } from "./Footer";
+export { Header } from "./Header";
+export { NavLink } from "./NavLink";
