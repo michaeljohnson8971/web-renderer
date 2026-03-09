@@ -84,11 +84,9 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <img
-                src={profileImg}
-                alt="DABL Studio founder"
-                className="w-1/2 aspect-[4/5] object-cover rounded-xl shadow-elevated"
-              />
+              <div className="w-3/4 aspect-[4/5] rounded-xl shadow-elevated bg-muted flex items-center justify-center">
+                <span className="text-muted-foreground text-sm">Image Placeholder</span>
+              </div>
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">
