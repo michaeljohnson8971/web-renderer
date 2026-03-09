@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./components";
 import { Footer } from "./components";
-import { Home, About, Services, ServicesTwo, SelectedWork, NotFound } from "./pages";
+import { Home, About, Blog, Services, ServicesTwo, SelectedWork, NotFound } from "./pages";
 
 const queryClient = new QueryClient();
 
