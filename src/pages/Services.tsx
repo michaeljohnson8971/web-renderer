@@ -4,6 +4,7 @@ import { Search, BarChart3, Users, Lightbulb, ArrowRight, Briefcase, RefreshCw, 
 import { useState } from "react";
 import { toast } from "sonner";
 import communityImg from "@/assets/community-planning.jpg";
+import heroImg from "@/assets/hero-cityscape.jpg";
 
 const services = [
   {
