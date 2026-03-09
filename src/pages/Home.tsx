@@ -152,7 +152,7 @@ const Home = () => {
 
       {/* Areas of Work */}
       <section className="py-8 lg:py-10 bg-secondary">
-        <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
+        <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-terracotta mb-2 text-center">Areas of Work</p>
           <h2 className="font-display text-lg md:text-xl text-foreground text-center mb-6">
             Core Focus Areas
