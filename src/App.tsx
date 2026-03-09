@@ -20,6 +20,7 @@ const App = () => (
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/work" element={<SelectedWork />} />
           <Route path="/services" element={<Services />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
