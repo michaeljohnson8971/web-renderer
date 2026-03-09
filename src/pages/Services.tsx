@@ -308,9 +308,10 @@ const Services = () => {
               </div>
               <button
                 type="submit"
-                className="w-full md:w-auto bg-primary text-primary-foreground px-10 py-4 rounded-full font-medium text-sm hover:bg-navy-light transition-all shadow-soft"
+                disabled={isSubmitting}
+                className="w-full md:w-auto bg-primary text-primary-foreground px-10 py-4 rounded-full font-medium text-sm hover:bg-navy-light transition-all shadow-soft disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
