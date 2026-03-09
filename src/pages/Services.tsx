@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Search, BarChart3, Users, Lightbulb, ArrowRight, Briefcase, RefreshCw, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -237,6 +237,15 @@ const Services = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              to="/work"
+              className="inline-flex items-center gap-2 text-terracotta font-medium text-sm hover:underline underline-offset-4 transition-all"
+            >
+              See Clients' Projects
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
