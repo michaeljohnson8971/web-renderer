@@ -42,12 +42,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="mt-16 pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-primary-foreground/30">
+        <div className="mt-16 pt-8 border-t border-primary-foreground/10">
+          <p className="text-xs text-primary-foreground/30 text-center sm:text-left">
             © {new Date().getFullYear()} DABL Studio. All rights reserved.
-          </p>
-          <p className="text-xs text-primary-foreground/30">
-            Privacy Policy
           </p>
         </div>
       </div>
