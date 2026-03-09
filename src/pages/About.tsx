@@ -164,42 +164,23 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
+      {/* Professional Overview */}
+      <section className="py-28 lg:py-36">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">About</p>
+            <h2 className="font-display text-2xl md:text-3xl text-foreground leading-tight mb-8">
+               DABL Studio
+            </h2>
+            <p className="text-muted-foreground leading-[1.8] text-lg mb-6">
+              DABL Studio is a mission-driven economic development consultancy with deep experience managing multi-sector initiatives at the intersection of community investment, public policy, and research. Our work focuses on designing strategies that translate economic development analysis into actionable programs that strengthen neighborhood economies and expand opportunity.
+            </p>
+            <p className="text-muted-foreground leading-[1.8] text-lg mb-10">
+              With experience spanning public, nonprofit, and institutional settings, DABL Studio builds partnerships between government agencies, philanthropic organizations, and community stakeholders to develop inclusive economic growth strategies. Our approach is grounded in rigorous research, participatory engagement, and a commitment to equitable outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
       {/* CTA */}
       <section className="py-28 lg:py-36 bg-primary">
         <div className="container mx-auto px-6 lg:px-8 text-center max-w-3xl">
