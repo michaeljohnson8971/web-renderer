@@ -61,14 +61,54 @@ const Services = () => {
     }
   }, [location]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // TODO: Replace with your Power Automate HTTP trigger URL
+  const POWER_AUTOMATE_WEBHOOK_URL = "";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
-    toast.success("Thank you for reaching out. We typically respond within 1–2 business days.");
-    setFormData({ name: "", email: "", phone: "", organization: "", inquiryType: "", referralSource: "", message: "" });
+
+    if (!POWER_AUTOMATE_WEBHOOK_URL) {
+      console.warn("Power Automate webhook URL is not configured. Form data:", formData);
+      toast.success("Thank you for reaching out. We typically respond within 1–2 business days.");
+      setFormData({ name: "", email: "", phone: "", organization: "", inquiryType: "", referralSource: "", message: "" });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(POWER_AUTOMATE_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || null,
+          organization: formData.organization,
+          inquiryType: formData.inquiryType || null,
+          referralSource: formData.referralSource || null,
+          message: formData.message,
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      toast.success("Thank you for reaching out. We typically respond within 1–2 business days.");
+      setFormData({ name: "", email: "", phone: "", organization: "", inquiryType: "", referralSource: "", message: "" });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast.error("Something went wrong. Please try again or email us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses = "w-full px-5 py-3.5 bg-background border border-border rounded-xl text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-terracotta/30 focus:border-terracotta/40 transition-all";
@@ -268,9 +308,10 @@ const Services = () => {
               </div>
               <button
                 type="submit"
-                className="w-full md:w-auto bg-primary text-primary-foreground px-10 py-4 rounded-full font-medium text-sm hover:bg-navy-light transition-all shadow-soft"
+                disabled={isSubmitting}
+                className="w-full md:w-auto bg-primary text-primary-foreground px-10 py-4 rounded-full font-medium text-sm hover:bg-navy-light transition-all shadow-soft disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
