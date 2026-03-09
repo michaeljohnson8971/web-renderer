@@ -32,6 +32,7 @@ const projects = [
     ],
   },
   {
+    slug: "economic-development-strategic-plan",
     title: "Economic Development Strategic Plan",
     client: "City Economic Development Office",
     year: "2023",
