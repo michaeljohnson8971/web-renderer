@@ -54,9 +54,10 @@ const Services = () => {
   });
 
   useEffect(() => {
-    if (location.hash === "#contact") {
+    const id = location.hash.replace("#", "");
+    if (id) {
       setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
   }, [location]);
@@ -141,7 +142,7 @@ const Services = () => {
       </section>
 
       {/* Services */}
-      <section className="py-5 lg:py-6">
+      <section id="services" className="py-5 lg:py-6">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4">Consulting Services</p>
           <h2 className="font-display text-2xl md:text-3xl text-foreground mb-10">

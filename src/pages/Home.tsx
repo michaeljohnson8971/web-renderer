@@ -140,7 +140,7 @@ const Home = () => {
               With experience spanning public, nonprofit, and institutional settings, DABL Studio builds partnerships between government agencies, philanthropic organizations, and community stakeholders to develop inclusive economic growth strategies. Our approach is grounded in rigorous research, participatory engagement, and a commitment to equitable outcomes.
             </p>
             <Link
-              to="/services"
+              to="/services#services"
               className="inline-flex items-center gap-2 text-terracotta font-medium text-sm hover:underline underline-offset-4"
             >
               Learn more about services
