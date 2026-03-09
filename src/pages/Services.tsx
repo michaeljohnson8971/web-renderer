@@ -238,6 +238,15 @@ const Services = () => {
               </div>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link
+              to="/work"
+              className="inline-flex items-center gap-2 text-terracotta font-medium text-sm hover:underline underline-offset-4 transition-all"
+            >
+              See Clients' Projects
+              <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 
