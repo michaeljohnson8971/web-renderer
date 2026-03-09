@@ -12,8 +12,9 @@ This guide maps every placeholder and editable content item across the site, org
 4. [Services Page](#services-page)
 5. [Services Two Page (unpublished)](#services-two-page)
 6. [Selected Work Page](#selected-work-page)
-7. [Portfolio Page (unpublished)](#portfolio-page)
-8. [Images & Assets](#images--assets)
+7. [Blog Page (unpublished)](#blog-page)
+8. [Portfolio Page (unpublished)](#portfolio-page)
+9. [Images & Assets](#images--assets)
 9. [SEO & Anti-AI Scraping](#seo--anti-ai-scraping)
 10. [Power Automate Integration](#power-automate-integration)
 
@@ -202,6 +203,7 @@ Edit the `projects` array. Each project object has:
 
 | Field | Description |
 |-------|-------------|
+| `slug` | Unique ID used for deep-linking from Home page |
 | `title` | Project name |
 | `client` | Client/partner name |
 | `year` | Year completed |
@@ -209,12 +211,42 @@ Edit the `projects` array. Each project object has:
 | `description` | Project summary paragraph |
 | `outcomes` | Array of key outcome bullet points |
 
+Home page project cards link to `/work#{slug}` and auto-scroll to the matching project.
+
 Projects display in alternating left/right layouts with image placeholders.
 
 ### Bottom CTA
 | Item | Current Value |
 |------|---------------|
 | Heading | `Interested in Working Together?` |
+| CTA link | `/services#contact` |
+
+---
+
+## Blog Page
+**File:** `src/pages/Blog.tsx`
+**Route:** `/blog`
+**Status:** ⚠️ **UNPUBLISHED** — not in the nav, accessible only via direct URL.
+
+### Posts Data
+Edit the `posts` array. Each post object has:
+
+| Field | Description |
+|-------|-------------|
+| `slug` | URL-friendly identifier |
+| `title` | Post headline |
+| `excerpt` | Short summary paragraph |
+| `date` | Publication date (YYYY-MM-DD) |
+| `readTime` | Estimated read time string |
+| `category` | Category tag (`Strategy`, `Planning`, `Equity`, `Finance`) |
+
+### Category Colors
+Edit the `categoryColors` object to change badge colors per category.
+
+### Bottom CTA
+| Item | Current Value |
+|------|---------------|
+| Heading | `Want to Discuss an Idea?` |
 | CTA link | `/services#contact` |
 
 ---
