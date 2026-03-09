@@ -169,16 +169,16 @@ const Home = () => {
           </Link>
           <div className="grid md:grid-cols-2 gap-8">
             {experiences.map((exp, i) => (
-              <div key={i} className="bg-card rounded-2xl shadow-card overflow-hidden">
+              <Link key={i} to="/work" className="bg-card rounded-2xl shadow-card overflow-hidden group hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
                 <div className="aspect-[16/9] bg-muted flex items-center justify-center">
                   <span className="text-muted-foreground text-sm">Image Placeholder</span>
                 </div>
                 <div className="p-8">
                   <div className="w-10 h-1 rounded-full bg-terracotta mb-6" />
-                  <h3 className="font-display text-xl text-foreground mb-3">{exp.title}</h3>
+                  <h3 className="font-display text-xl text-foreground mb-3 group-hover:text-terracotta transition-colors">{exp.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
