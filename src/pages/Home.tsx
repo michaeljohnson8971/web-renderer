@@ -161,9 +161,12 @@ const Home = () => {
       <section className="py-28 lg:py-36">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">Applied Experience</p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16">
-            Selected Work
-          </h2>
+          <Link to="/work" className="group">
+            <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16 group-hover:text-terracotta transition-colors inline-flex items-center gap-3">
+              Selected Work
+              <ArrowRight size={24} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+            </h2>
+          </Link>
           <div className="grid md:grid-cols-2 gap-8">
             {experiences.map((exp, i) => (
               <div key={i} className="bg-card rounded-2xl shadow-card overflow-hidden">
