@@ -224,22 +224,15 @@ const Services = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
             {clientTypes.map((group) => (
-              <div key={group.category} className="bg-card rounded-lg shadow-card overflow-hidden">
-                <img
-                  src={group.image}
-                  alt={`${group.category} project showcase`}
-                  className="w-full aspect-[16/9] object-cover"
-                />
-                <div className="p-3">
-                  <h3 className="font-display text-xs text-foreground mb-1.5">{group.category}</h3>
-                  <div className="space-y-1">
-                    {group.items.map((item) => (
-                      <div key={item} className="flex items-center gap-1.5">
-                        <ArrowRight size={8} className="text-terracotta shrink-0" />
-                        <span className="text-muted-foreground text-[10px]">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+              <div key={group.category} className="bg-card rounded-lg shadow-card p-3">
+                <h3 className="font-display text-xs text-foreground mb-1.5">{group.category}</h3>
+                <div className="space-y-1">
+                  {group.items.map((item) => (
+                    <div key={item} className="flex items-center gap-1.5">
+                      <ArrowRight size={8} className="text-terracotta shrink-0" />
+                      <span className="text-muted-foreground text-[10px]">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
