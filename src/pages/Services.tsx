@@ -54,10 +54,9 @@ const Services = () => {
   });
 
   useEffect(() => {
-    const id = location.hash.replace("#", "");
-    if (id) {
+    if (location.hash === "#contact") {
       setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
   }, [location]);
@@ -142,7 +141,7 @@ const Services = () => {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-5 lg:py-6">
+      <section className="py-5 lg:py-6">
         <div className="container mx-auto px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-4">Consulting Services</p>
           <h2 className="font-display text-2xl md:text-3xl text-foreground mb-10">
@@ -225,15 +224,22 @@ const Services = () => {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
             {clientTypes.map((group) => (
-              <div key={group.category} className="bg-card rounded-lg shadow-card p-3">
-                <h3 className="font-display text-xs text-foreground mb-1.5">{group.category}</h3>
-                <div className="space-y-1">
-                  {group.items.map((item) => (
-                    <div key={item} className="flex items-center gap-1.5">
-                      <ArrowRight size={8} className="text-terracotta shrink-0" />
-                      <span className="text-muted-foreground text-[10px]">{item}</span>
-                    </div>
-                  ))}
+              <div key={group.category} className="bg-card rounded-lg shadow-card overflow-hidden">
+                <img
+                  src={group.image}
+                  alt={`${group.category} project showcase`}
+                  className="w-full aspect-[16/9] object-cover"
+                />
+                <div className="p-3">
+                  <h3 className="font-display text-xs text-foreground mb-1.5">{group.category}</h3>
+                  <div className="space-y-1">
+                    {group.items.map((item) => (
+                      <div key={item} className="flex items-center gap-1.5">
+                        <ArrowRight size={8} className="text-terracotta shrink-0" />
+                        <span className="text-muted-foreground text-[10px]">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
