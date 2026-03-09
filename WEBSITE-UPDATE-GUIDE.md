@@ -228,7 +228,9 @@ Use this schema when configuring the "Parse JSON" step in Power Automate.
 - [ ] Replace LinkedIn placeholder URL in Footer
 - [ ] Add Privacy Policy link in Footer
 - [ ] Replace 4× Client Types placeholder images
+- [ ] Replace 4× Portfolio project placeholder images
 - [ ] Create and upload `og-image.png` (1200×630px)
 - [ ] Add Power Automate webhook URL
 - [ ] Review all bio/description text for accuracy
 - [ ] Update canonical URL if not using `dablstudio.com`
+- [ ] Publish Portfolio page when ready (see instructions above)
