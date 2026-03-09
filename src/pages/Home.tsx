@@ -126,7 +126,7 @@ const Home = () => {
       </section>
 
       {/* Professional Overview */}
-      <section className="py-28 lg:py-36">
+      <section className="py-7 lg:py-9">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">About</p>
