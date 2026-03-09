@@ -18,6 +18,7 @@ const projects = [
     ],
   },
   {
+    slug: "small-business-ecosystem-research",
     title: "Small Business Ecosystem Research",
     client: "Community Development Corporation",
     year: "2023",
