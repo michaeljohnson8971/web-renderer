@@ -98,10 +98,10 @@ const Services = () => {
           <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16">
             Service Areas
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {services.map((service) => (
-              <div key={service.title} className="bg-card p-8 rounded-2xl shadow-card">
-                <h3 className="font-display text-xl text-foreground mb-5">{service.title}</h3>
+              <div key={service.title} className="bg-card p-5 rounded-xl shadow-card">
+                <h3 className="font-display text-base text-foreground mb-3">{service.title}</h3>
                 <ul className="space-y-3">
                   {service.items.map((item) => (
                     <li key={item} className="text-muted-foreground text-sm flex items-start gap-3">
