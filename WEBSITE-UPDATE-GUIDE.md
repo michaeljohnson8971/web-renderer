@@ -10,8 +10,9 @@ This guide maps every placeholder and editable content item across the site, org
 2. [Home Page](#home-page)
 3. [About Page](#about-page)
 4. [Services Page](#services-page)
-5. [Images & Assets](#images--assets)
-6. [Power Automate Integration](#power-automate-integration)
+5. [Portfolio Page (unpublished)](#portfolio-page)
+6. [Images & Assets](#images--assets)
+7. [Power Automate Integration](#power-automate-integration)
 
 ---
 
