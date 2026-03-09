@@ -38,10 +38,10 @@ const engagementModels = [
 ];
 
 const clientTypes = [
-  { category: "Local Governments", items: ["Planning departments", "Economic development departments", "Mayoral initiatives"] },
-  { category: "Community Development Organizations", items: ["Community development corporations", "Neighborhood organizations", "Housing organizations"] },
-  { category: "Philanthropy & Research Institutions", items: ["Foundations", "Universities", "Policy institutes"] },
-  { category: "Private Sector & Development", items: ["Real estate developers", "Economic impact analysts", "Incentives navigation"] },
+  { category: "Local Governments", image: "/placeholder.svg", items: ["Planning departments", "Economic development departments", "Mayoral initiatives"] },
+  { category: "Community Development Organizations", image: "/placeholder.svg", items: ["Community development corporations", "Neighborhood organizations", "Housing organizations"] },
+  { category: "Philanthropy & Research Institutions", image: "/placeholder.svg", items: ["Foundations", "Universities", "Policy institutes"] },
+  { category: "Private Sector & Development", image: "/placeholder.svg", items: ["Real estate developers", "Economic impact analysts", "Incentives navigation"] },
 ];
 
 const inquiryTypes = ["General Inquiry", "Project Scoping", "Speaking Request", "Media", "Other"];
