@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, GraduationCap, Award, MapPin } from "lucide-react";
 import communityImg from "@/assets/community-engagement.jpg";
-import profileImg from "@/assets/about-profile.jpg";
+
 
 const credentials = [
   {
@@ -83,12 +83,17 @@ const About = () => {
       <section className="py-28 lg:py-36">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img
-                src={profileImg}
-                alt="DABL Studio founder"
-                className="w-full aspect-[4/5] object-cover rounded-2xl shadow-elevated"
-              />
+            <div className="bg-secondary p-10 lg:p-12 rounded-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">About</p>
+              <h3 className="font-display text-2xl md:text-3xl text-foreground leading-tight mb-6">
+                DABL Studio
+              </h3>
+              <p className="text-muted-foreground leading-[1.8] text-base mb-5">
+                DABL Studio is a mission-driven economic development consultancy with deep experience managing multi-sector initiatives at the intersection of community investment, public policy, and research. Our work focuses on designing strategies that translate economic development analysis into actionable programs that strengthen neighborhood economies and expand opportunity.
+              </p>
+              <p className="text-muted-foreground leading-[1.8] text-base">
+                With experience spanning public, nonprofit, and institutional settings, DABL Studio builds partnerships between government agencies, philanthropic organizations, and community stakeholders to develop inclusive economic growth strategies. Our approach is grounded in rigorous research, participatory engagement, and a commitment to equitable outcomes.
+              </p>
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">
