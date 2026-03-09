@@ -44,6 +44,25 @@ const clientTypes = [
   { category: "Private Sector & Development", image: "/placeholder.svg", items: ["Real estate developers", "Economic impact analysts", "Incentives navigation"] },
 ];
 
+const selectedWork = [
+  {
+    title: "Community Investment Initiative",
+    description: "Managed a multi-sector community investment strategy coordinating public, philanthropic, and private capital to strengthen neighborhood economies in underserved corridors.",
+  },
+  {
+    title: "Small Business Ecosystem Research",
+    description: "Led research examining small business support systems across multiple districts, producing actionable recommendations for strengthening local entrepreneurship infrastructure.",
+  },
+  {
+    title: "Economic Development Strategic Plan",
+    description: "Developed a comprehensive economic development framework for a municipal planning department, integrating market analysis, stakeholder input, and investment prioritization.",
+  },
+  {
+    title: "Cross-Sector Policy Collaboration",
+    description: "Facilitated partnerships between government agencies, university research centers, and community organizations to align economic development policy with neighborhood priorities.",
+  },
+];
+
 const inquiryTypes = ["General Inquiry", "Project Scoping", "Speaking Request", "Media", "Other"];
 const referralSources = ["Referral", "LinkedIn", "Web Search", "Conference", "Other"];
 
