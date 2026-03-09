@@ -12,8 +12,9 @@ This guide maps every placeholder and editable content item across the site, org
 4. [Services Page](#services-page)
 5. [Services Two Page (unpublished)](#services-two-page)
 6. [Selected Work Page](#selected-work-page)
-7. [Portfolio Page (unpublished)](#portfolio-page)
-8. [Images & Assets](#images--assets)
+7. [Blog Page (unpublished)](#blog-page)
+8. [Portfolio Page (unpublished)](#portfolio-page)
+9. [Images & Assets](#images--assets)
 9. [SEO & Anti-AI Scraping](#seo--anti-ai-scraping)
 10. [Power Automate Integration](#power-automate-integration)
 
