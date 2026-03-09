@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Search, BarChart3, Users, Lightbulb, ArrowRight, Briefcase, RefreshCw, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
