@@ -87,7 +87,7 @@ const About = () => {
               <img
                 src={profileImg}
                 alt="DABL Studio founder"
-                className="w-full aspect-[4/5] object-cover rounded-2xl shadow-elevated"
+                className="w-1/2 aspect-[4/5] object-cover rounded-xl shadow-elevated"
               />
             </div>
             <div>
