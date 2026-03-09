@@ -173,6 +173,64 @@ Edit the `clientTypes` array. Each has:
 
 ---
 
+## Portfolio Page
+**File:** `src/pages/portfolio/Portfolio.tsx`
+**Status:** ⚠️ **UNPUBLISHED** — not in the router or navigation yet.
+
+### How to Publish the Portfolio Page
+
+You need to make **3 changes** to go live:
+
+#### 1. Add the route to `src/App.tsx`
+
+Add the import at the top:
+```typescript
+import { Portfolio } from "./pages/portfolio";
+```
+
+Add the route inside `<Routes>` (e.g. after the services route on line 23):
+```typescript
+<Route path="/portfolio" element={<Portfolio />} />
+```
+
+#### 2. Add a nav link in `src/components/Header.tsx`
+
+Add an entry to the `navItems` array (line 9–13):
+```typescript
+{ label: "Portfolio", path: "/portfolio" },
+```
+
+#### 3. (Optional) Add a footer link in `src/components/Footer.tsx`
+
+Add after the existing nav links (around line 22):
+```tsx
+<Link to="/portfolio" className="text-sm text-primary-foreground/60 hover:text-terracotta transition-colors">Portfolio</Link>
+```
+
+### Project Data (lines 3–63)
+Edit the `projects` array. Each project object has:
+
+| Field | Description |
+|-------|-------------|
+| `title` | Project name |
+| `client` | Client/partner name |
+| `year` | Year completed |
+| `category` | Category tag (also drives the filter chips) |
+| `description` | Project summary paragraph |
+| `outcomes` | Array of key outcome bullet points |
+| `image` | ⚠️ **ALL USE `/placeholder.svg`** — replace with real images |
+
+### Category Tags (line 65)
+Auto-generated from the `projects` array categories. Add new categories by adding projects with new `category` values.
+
+### Bottom CTA (lines ~150–170)
+| Item | Current Value |
+|------|---------------|
+| Heading | `Interested in Working Together?` |
+| Description | `We welcome conversations about new projects...` |
+
+---
+
 ## Images & Assets
 
 ### Current images in `src/assets/`:
