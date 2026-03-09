@@ -10,9 +10,12 @@ This guide maps every placeholder and editable content item across the site, org
 2. [Home Page](#home-page)
 3. [About Page](#about-page)
 4. [Services Page](#services-page)
-5. [Portfolio Page (unpublished)](#portfolio-page)
-6. [Images & Assets](#images--assets)
-7. [Power Automate Integration](#power-automate-integration)
+5. [Services Two Page (unpublished)](#services-two-page)
+6. [Selected Work Page](#selected-work-page)
+7. [Portfolio Page (unpublished)](#portfolio-page)
+8. [Images & Assets](#images--assets)
+9. [SEO & Anti-AI Scraping](#seo--anti-ai-scraping)
+10. [Power Automate Integration](#power-automate-integration)
 
 ---
 
@@ -21,193 +24,180 @@ This guide maps every placeholder and editable content item across the site, org
 ### Site Meta Tags & SEO
 **File:** `index.html`
 
-| Line | Item | Current Value |
-|------|------|---------------|
-| 22 | Page title | `DABL Studio \| Economic Development Strategy & Consulting` |
-| 23 | Meta description | `DABL Studio is an economic development consultancy...` |
-| 25 | Keywords | `economic development, community investment...` |
-| 29 | OG URL | `https://dablstudio.com/` |
-| 30 | OG title | Same as page title |
-| 32 | OG image | `https://dablstudio.com/og-image.png` ⚠️ **PLACEHOLDER — file does not exist yet** |
-| 39 | Twitter image | Same as OG image ⚠️ **PLACEHOLDER** |
-| 45 | Canonical URL | `https://dablstudio.com/` |
+| Item | Current Value |
+|------|---------------|
+| Page title | `DABL Studio \| Economic Development Strategy & Consulting` |
+| Meta description | `DABL Studio is an economic development consultancy...` |
+| Keywords | Chicago policy research, urban planning, corridor planning, community wealth building, racial equality, equity, reparations, environmental planning, energy policy, renewables, municipal bonds + 15 more |
+| Anti-AI meta tags | `noai`, `noimageai`, GPTBot/CCBot/Google-Extended blocked |
+| OG URL | `https://dablstudio.com/` |
+| OG image | `https://dablstudio.com/og-image.png` ⚠️ **PLACEHOLDER — file does not exist yet** |
+| Canonical URL | `https://dablstudio.com/` |
+| JSON-LD | `ProfessionalService` schema with Chicago geo-targeting + `WebSite` schema |
 
-**To update:** Edit the values directly in `index.html`. You'll also need to create/upload an `og-image.png` to the `public/` folder (recommended 1200×630px).
+**To update:** Edit the values directly in `index.html`. Create/upload an `og-image.png` to the `public/` folder (recommended 1200×630px).
 
 ---
 
 ### Header / Navigation
 **File:** `src/components/Header.tsx`
 
-| Line | Item | Current Value |
-|------|------|---------------|
-| 19–24 | Brand name | `DABL` / `Studio` |
-| 10–13 | Nav items | `Home`, `About`, `Work & Services` |
+| Item | Current Value |
+|------|---------------|
+| Brand name | `DABL` / `Studio` |
+| Nav items | `Home`, `About`, `Services` |
 
-**To update:** Edit the `navItems` array (line 9–13) or the brand text (lines 19–24).
+**To update:** Edit the `navItems` array or the brand text. Note: "Selected Work" and "Services Two" are intentionally **not** in the nav.
 
 ---
 
 ### Footer
 **File:** `src/components/Footer.tsx`
 
-| Line | Item | Current Value |
-|------|------|---------------|
-| 9–10 | Brand name | `DABL Studio` |
-| 12–13 | Tagline | `Economic development consultancy working with cities...` |
-| 31 | Email | `hello@dablstudio.com` |
-| 36 | LinkedIn URL | `https://linkedin.com` ⚠️ **PLACEHOLDER — not a real profile link** |
-| 50 | Privacy Policy | Static text, not linked ⚠️ **PLACEHOLDER** |
+| Item | Current Value |
+|------|---------------|
+| Brand name | `DABL Studio` |
+| Tagline | `Economic development consultancy working with cities...` |
+| Email | `hello@dablstudio.com` |
+| LinkedIn URL | `https://linkedin.com` ⚠️ **PLACEHOLDER — not a real profile link** |
+| Privacy Policy | Static text, not linked ⚠️ **PLACEHOLDER** |
 
-**To update:** Replace the LinkedIn `href` (line 36) with your actual profile URL. Add a real link to the Privacy Policy text (line 50).
+**To update:** Replace the LinkedIn `href` with your actual profile URL. Add a real link to the Privacy Policy text.
 
 ---
 
 ## Home Page
 **File:** `src/pages/Home.tsx`
 
-### Hero Section (lines 73–107)
-| Line | Item | Current Value |
-|------|------|---------------|
-| 76 | Hero image | `src/assets/hero-cityscape.jpg` (imported) |
-| 84–86 | Headline | `Building Stronger Local Economies...` |
-| 87–88 | Subheadline | `Economic development consultancy working with cities...` |
-| 95 | CTA button text | `Let's Talk` |
-| 102 | Secondary CTA text | `View Work & Services` |
+### Hero Section
+| Item | Current Value |
+|------|---------------|
+| Hero image | `src/assets/hero-cityscape.jpg` (imported) |
+| Headline | `Building Stronger Local Economies...` |
+| Subheadline | `Economic development consultancy working with cities...` |
+| CTA button text | `Let's Talk` → links to `/services#contact` |
+| Secondary CTA text | `View Work & Services` → links to `/services` |
 
-### Value Pillars (lines 5–21)
+### Value Pillars
 Edit the `valuePillars` array. Each object has `title` and `description`.
 
-### Professional Overview (lines 129–151)
-| Line | Item |
-|------|------|
-| 134 | Section heading (`DABL Studio`) |
-| 137 | First paragraph — company description |
-| 140 | Second paragraph — company approach |
-
-### Areas of Work (lines 23–48)
+### Areas of Work
 Edit the `expertise` array. Each object has `title`, `description`, and `items` (bullet list).
 
-### Selected Experience (lines 50–67)
+### Selected Experience
 Edit the `experiences` array. Each object has `title` and `description`.
+- **"Selected Work" heading** is a clickable link to `/work` with hover arrow effect.
 
-### Bottom CTA (lines 205–224)
-| Line | Item |
-|------|------|
-| 207–208 | Heading |
-| 210–211 | Description |
+### Bottom CTA
+| Item | Current Value |
+|------|---------------|
+| Heading | `Every Project Starts With a Conversation` |
+| Response time note | `We typically respond within 1–2 business days.` |
 
 ---
 
 ## About Page
 **File:** `src/pages/About.tsx`
 
-### Hero Section (lines 64–80)
-| Line | Item |
-|------|------|
-| 70–71 | Headline (`The Work Behind the Work`) |
-| 73–76 | Description |
+### Hero Section
+| Item | Current Value |
+|------|---------------|
+| Headline | `The Work Behind the Work` |
+| Description | About DABL Studio's approach |
 
-### Bio / Founder Section (lines 83–125)
-| Line | Item |
-|------|------|
-| 88 | Profile photo — `src/assets/about-profile.jpg` |
-| 97–98 | Section heading |
-| 101–120 | Bio paragraphs (3 paragraphs of text) |
+### Bio / Founder Section
+| Item | Current Value |
+|------|---------------|
+| Profile photo | `src/assets/about-profile.jpg` |
+| Bio paragraphs | 3 paragraphs of founder text |
 
-### Credentials (lines 6–35)
+### Credentials
 Edit the `credentials` array. Three categories:
-- **Education** — degree names (lines 11–12)
-- **Professional Background** — experience items (lines 19–22)
-- **Sector Experience** — sector items (lines 29–32)
+- **Education** — degree names
+- **Professional Background** — experience items
+- **Sector Experience** — sector items
 
-### Values (lines 37–58)
+### DABL Studio Section
+Positioned below credentials. Contains company overview paragraphs.
+
+### Values
 Edit the `values` array. Each object has `title` and `description`.
 
-### Values Image (line 185)
+### Values Image
 Uses `src/assets/community-engagement.jpg`.
-
-### Bottom CTA (lines 208–225)
-| Line | Item |
-|------|------|
-| 210–211 | Heading |
-| 213–215 | Description |
 
 ---
 
 ## Services Page
 **File:** `src/pages/Services.tsx`
 
-### Hero Section (lines 120–141)
-| Line | Item |
-|------|------|
-| 125–126 | Headline (`How We Work`) |
-| 128–129 | Description |
-| 134 | Hero image — `src/assets/community-planning.jpg` |
+### Hero Section
+| Item | Current Value |
+|------|---------------|
+| Headline | `How We Work` |
+| Hero image | `src/assets/community-planning.jpg` |
 
-### Service Areas (lines 8–25)
-Edit the `services` array. Four categories, each with `title` and `items` (bullet list).
+### Service Areas
+Edit the `services` array. Four categories, each with `title` and `items`.
 
-### Engagement Models (lines 34–38)
+### Engagement Models
 Edit the `engagementModels` array. Each has `title` and `description`.
 
-### Methodology (lines 27–32)
+### Methodology
 Edit the `methodology` array. Each has `step`, `title`, and `description`.
 
-### Client Types (lines 40–45)
-Edit the `clientTypes` array. Each has:
-- `category` — group name
-- `image` — ⚠️ **ALL USE `/placeholder.svg`** — replace with real images
-- `items` — bullet list
+### Client Types
+Edit the `clientTypes` array. Each has `category`, `image` (⚠️ all use `/placeholder.svg`), and `items`.
+- **"See Clients' Projects"** link at bottom → navigates to `/work`
 
-**To update images:** Replace `/placeholder.svg` with paths to real images. Either:
-1. Add images to `public/` folder and use `/your-image.jpg`
-2. Add images to `src/assets/` and import them at the top of the file
-
-### Contact Form (lines 250–316)
-| Line | Item |
-|------|------|
-| 260 | Contact email | `hello@dablstudio.com` |
-| 47 | Inquiry types dropdown | `inquiryTypes` array |
-| 48 | Referral sources dropdown | `referralSources` array |
+### Contact Form
+| Item | Current Value |
+|------|---------------|
+| Contact email | `hello@dablstudio.com` |
+| Inquiry types | `inquiryTypes` array |
+| Referral sources | `referralSources` array |
+| Backend | Power Automate webhook (see [integration section](#power-automate-integration)) |
 
 ---
 
-## Portfolio Page
-**File:** `src/pages/portfolio/Portfolio.tsx`
-**Status:** ⚠️ **UNPUBLISHED** — not in the router or navigation yet.
+## Services Two Page
+**File:** `src/pages/ServicesTwo.tsx`
+**Route:** `/services-two`
+**Status:** ⚠️ **UNPUBLISHED** — not in the nav, accessible only via direct URL.
 
-### How to Publish the Portfolio Page
+This is a duplicate of the Services page with the contact section replaced by an **embedded form** (iframe) compatible with **Microsoft Forms** or **Google Forms**.
 
-You need to make **3 changes** to go live:
+### How to Activate the Contact Form
 
-#### 1. Add the route to `src/App.tsx`
+Edit `src/pages/ServicesTwo.tsx` and set the `FORM_EMBED_URL` constant:
 
-Add the import at the top:
 ```typescript
-import { Portfolio } from "./pages/portfolio";
+const FORM_EMBED_URL = "YOUR_FORM_URL_HERE";
 ```
 
-Add the route inside `<Routes>` (e.g. after the services route on line 23):
-```typescript
-<Route path="/portfolio" element={<Portfolio />} />
-```
+**Microsoft Forms:**
+1. Go to [forms.office.com](https://forms.office.com) → open your form → Share → Embed
+2. Copy the `src` URL from the iframe code
+3. Paste it as `FORM_EMBED_URL`
 
-#### 2. Add a nav link in `src/components/Header.tsx`
+**Google Forms:**
+1. Go to [docs.google.com/forms](https://docs.google.com/forms) → open your form → Send → `<>` Embed
+2. Copy the `src` URL from the iframe code
+3. Paste it as `FORM_EMBED_URL`
 
-Add an entry to the `navItems` array (line 9–13):
-```typescript
-{ label: "Portfolio", path: "/portfolio" },
-```
+The page auto-detects the form platform and adjusts iframe height accordingly. A loading spinner shows while the form loads, and a fallback "email us" card displays when no URL is configured.
 
-#### 3. (Optional) Add a footer link in `src/components/Footer.tsx`
+### All Other Sections
+Identical to the main Services page. Edit the same arrays (`services`, `engagementModels`, `methodology`, `clientTypes`) — these are defined locally in the file.
 
-Add after the existing nav links (around line 22):
-```tsx
-<Link to="/portfolio" className="text-sm text-primary-foreground/60 hover:text-terracotta transition-colors">Portfolio</Link>
-```
+---
 
-### Project Data (lines 3–63)
+## Selected Work Page
+**File:** `src/pages/SelectedWork.tsx`
+**Route:** `/work`
+**Status:** ✅ **LIVE** — accessible via the "Selected Work" link on the Home page and "See Clients' Projects" on the Services page. **Not in the nav.**
+
+### Project Data
 Edit the `projects` array. Each project object has:
 
 | Field | Description |
@@ -215,19 +205,25 @@ Edit the `projects` array. Each project object has:
 | `title` | Project name |
 | `client` | Client/partner name |
 | `year` | Year completed |
-| `category` | Category tag (also drives the filter chips) |
+| `category` | Category tag |
 | `description` | Project summary paragraph |
 | `outcomes` | Array of key outcome bullet points |
-| `image` | ⚠️ **ALL USE `/placeholder.svg`** — replace with real images |
 
-### Category Tags (line 65)
-Auto-generated from the `projects` array categories. Add new categories by adding projects with new `category` values.
+Projects display in alternating left/right layouts with image placeholders.
 
-### Bottom CTA (lines ~150–170)
+### Bottom CTA
 | Item | Current Value |
 |------|---------------|
 | Heading | `Interested in Working Together?` |
-| Description | `We welcome conversations about new projects...` |
+| CTA link | `/services#contact` |
+
+---
+
+## Portfolio Page
+**File:** `src/pages/portfolio/Portfolio.tsx`
+**Status:** ⚠️ **UNPUBLISHED** — has a route file but may overlap with Selected Work page.
+
+See the `projects` array for editable data. Structure is similar to Selected Work but includes category filter tags.
 
 ---
 
@@ -242,17 +238,39 @@ Auto-generated from the `projects` array categories. Add new categories by addin
 | `community-planning.jpg` | Services hero | Planning session photo |
 
 ### Placeholder images needing replacement:
-| Location | File | Current Value |
-|----------|------|---------------|
-| Services — Client Types (×4) | `src/pages/Services.tsx` line 41–44 | `/placeholder.svg` |
-| OG/social share image | `index.html` line 32, 39 | `og-image.png` (doesn't exist) |
+| Location | Current Value |
+|----------|---------------|
+| Services — Client Types (×4) | `/placeholder.svg` |
+| Selected Work — Project images (×4) | Grey `bg-muted` placeholder divs |
+| OG/social share image | `og-image.png` (doesn't exist yet) |
 
-**To replace:** Add your images to `src/assets/`, import them at the top of the file, and replace the `/placeholder.svg` references.
+---
+
+## SEO & Anti-AI Scraping
+
+### SEO Files
+| File | Purpose |
+|------|---------|
+| `index.html` | Meta tags, JSON-LD structured data, keywords |
+| `public/sitemap.xml` | XML sitemap with all 4 pages (home, about, services, work) |
+| `public/robots.txt` | Bot access rules |
+
+### robots.txt Configuration
+**File:** `public/robots.txt`
+
+**Allowed bots:** Googlebot, Bingbot, Slurp, DuckDuckBot, Yandex, Twitterbot, facebookexternalhit, LinkedInBot, Slackbot, WhatsApp
+
+**Blocked AI crawlers:** GPTBot, ChatGPT-User, CCBot, Google-Extended, anthropic-ai, ClaudeBot, Claude-Web, cohere-ai, Bytespider, PerplexityBot, Applebot-Extended, FacebookBot, Meta-ExternalAgent, omgili, Diffbot, img2dataset, Amazonbot
+
+**Blocked scrapers:** SemrushBot, AhrefsBot, MJ12bot, DotBot, PetalBot
+
+### To add new pages to sitemap:
+Edit `public/sitemap.xml` and add a new `<url>` entry.
 
 ---
 
 ## Power Automate Integration
-**File:** `src/pages/Services.tsx`, line 67
+**File:** `src/pages/Services.tsx`
 
 ```typescript
 const POWER_AUTOMATE_WEBHOOK_URL = "";
@@ -277,18 +295,17 @@ The form sends this JSON payload:
 }
 ```
 
-Use this schema when configuring the "Parse JSON" step in Power Automate.
-
 ---
 
 ## Quick Checklist
 
 - [ ] Replace LinkedIn placeholder URL in Footer
 - [ ] Add Privacy Policy link in Footer
-- [ ] Replace 4× Client Types placeholder images
-- [ ] Replace 4× Portfolio project placeholder images
+- [ ] Replace 4× Client Types placeholder images (Services page)
+- [ ] Replace 4× Selected Work project image placeholders
 - [ ] Create and upload `og-image.png` (1200×630px)
-- [ ] Add Power Automate webhook URL
+- [ ] Add Power Automate webhook URL (Services page)
+- [ ] Add Microsoft Forms / Google Forms URL (Services Two page)
 - [ ] Review all bio/description text for accuracy
 - [ ] Update canonical URL if not using `dablstudio.com`
-- [ ] Publish Portfolio page when ready (see instructions above)
+- [ ] Update `sameAs` array in JSON-LD with real social media URLs
