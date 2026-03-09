@@ -62,6 +62,20 @@ const projects = [
 ];
 
 const SelectedWork = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <main className="pt-20">
       {/* Hero */}
