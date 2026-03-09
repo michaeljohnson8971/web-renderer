@@ -68,7 +68,7 @@ const About = () => {
               About
             </p>
             <h1 className="font-display text-4xl md:text-5xl text-foreground leading-tight mb-6">
-              The Work Behind the Work
+              The Persons Behind the Work
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed">
               DABL Studio was founded to bring strategic clarity and
