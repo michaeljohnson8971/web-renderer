@@ -164,25 +164,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Selected Experience */}
-      <section className="py-28 lg:py-36">
-        <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">Applied Experience</p>
-          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16">
-            Selected Work
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {experiences.map((exp, i) => (
-              <div key={i} className="bg-card p-8 rounded-2xl shadow-card">
-                <div className="w-10 h-1 rounded-full bg-terracotta mb-6" />
-                <h3 className="font-display text-xl text-foreground mb-3">{exp.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{exp.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-28 lg:py-36 bg-primary">
         <div className="container mx-auto px-6 lg:px-8 text-center max-w-3xl">
