@@ -173,7 +173,7 @@ const Home = () => {
           </Link>
           <div className="grid md:grid-cols-2 gap-8">
             {experiences.map((exp, i) => (
-              <Link key={i} to="/work" className="bg-card rounded-2xl shadow-card overflow-hidden group hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
+              <Link key={i} to={`/work#${exp.slug}`} className="bg-card rounded-2xl shadow-card overflow-hidden group hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
                 <div className="aspect-[16/9] bg-muted flex items-center justify-center">
                   <span className="text-muted-foreground text-sm">Image Placeholder</span>
                 </div>
