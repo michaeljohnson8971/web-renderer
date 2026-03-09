@@ -101,8 +101,9 @@ const SelectedWork = () => {
           <div className="space-y-20">
             {projects.map((project, i) => (
               <div
-                key={i}
-                className={`grid lg:grid-cols-2 gap-12 items-center`}
+                id={project.slug}
+                key={project.slug}
+                className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-32`}
               >
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="w-full aspect-[4/3] bg-muted rounded-2xl shadow-card flex items-center justify-center">
