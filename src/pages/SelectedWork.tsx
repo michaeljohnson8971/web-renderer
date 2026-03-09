@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
+    slug: "community-investment-initiative",
     title: "Community Investment Initiative",
     client: "Municipal Planning Department",
     year: "2024",
@@ -16,6 +18,7 @@ const projects = [
     ],
   },
   {
+    slug: "small-business-ecosystem-research",
     title: "Small Business Ecosystem Research",
     client: "Community Development Corporation",
     year: "2023",
@@ -29,6 +32,7 @@ const projects = [
     ],
   },
   {
+    slug: "economic-development-strategic-plan",
     title: "Economic Development Strategic Plan",
     client: "City Economic Development Office",
     year: "2023",
@@ -42,6 +46,7 @@ const projects = [
     ],
   },
   {
+    slug: "cross-sector-policy-collaboration",
     title: "Cross-Sector Policy Collaboration",
     client: "University Policy Center",
     year: "2022",
@@ -57,6 +62,20 @@ const projects = [
 ];
 
 const SelectedWork = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <main className="pt-20">
       {/* Hero */}
@@ -82,8 +101,9 @@ const SelectedWork = () => {
           <div className="space-y-20">
             {projects.map((project, i) => (
               <div
-                key={i}
-                className={`grid lg:grid-cols-2 gap-12 items-center`}
+                id={project.slug}
+                key={project.slug}
+                className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-32`}
               >
                 <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="w-full aspect-[4/3] bg-muted rounded-2xl shadow-card flex items-center justify-center">

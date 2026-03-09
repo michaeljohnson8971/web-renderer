@@ -49,18 +49,22 @@ const expertise = [
 
 const experiences = [
   {
+    slug: "community-investment-initiative",
     title: "Community Investment Initiative",
     description: "Managed a multi-sector community investment strategy coordinating public, philanthropic, and private capital to strengthen neighborhood economies in underserved corridors.",
   },
   {
+    slug: "small-business-ecosystem-research",
     title: "Small Business Ecosystem Research",
     description: "Led research examining small business support systems across multiple districts, producing actionable recommendations for strengthening local entrepreneurship infrastructure.",
   },
   {
+    slug: "economic-development-strategic-plan",
     title: "Economic Development Strategic Plan",
     description: "Developed a comprehensive economic development framework for a municipal planning department, integrating market analysis, stakeholder input, and investment prioritization.",
   },
   {
+    slug: "cross-sector-policy-collaboration",
     title: "Cross-Sector Policy Collaboration",
     description: "Facilitated partnerships between government agencies, university research centers, and community organizations to align economic development policy with neighborhood priorities.",
   },
@@ -169,7 +173,7 @@ const Home = () => {
           </Link>
           <div className="grid md:grid-cols-2 gap-8">
             {experiences.map((exp, i) => (
-              <Link key={i} to="/work" className="bg-card rounded-2xl shadow-card overflow-hidden group hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
+              <Link key={i} to={`/work#${exp.slug}`} className="bg-card rounded-2xl shadow-card overflow-hidden group hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
                 <div className="aspect-[16/9] bg-muted flex items-center justify-center">
                   <span className="text-muted-foreground text-sm">Image Placeholder</span>
                 </div>
