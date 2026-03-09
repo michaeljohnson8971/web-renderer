@@ -38,10 +38,10 @@ const engagementModels = [
 ];
 
 const clientTypes = [
-  { category: "Local Governments", items: ["Planning departments", "Economic development departments", "Mayoral initiatives"] },
-  { category: "Community Development Organizations", items: ["Community development corporations", "Neighborhood organizations", "Housing organizations"] },
-  { category: "Philanthropy & Research Institutions", items: ["Foundations", "Universities", "Policy institutes"] },
-  { category: "Private Sector & Development", items: ["Real estate developers", "Economic impact analysts", "Incentives navigation"] },
+  { category: "Local Governments", image: "/placeholder.svg", items: ["Planning departments", "Economic development departments", "Mayoral initiatives"] },
+  { category: "Community Development Organizations", image: "/placeholder.svg", items: ["Community development corporations", "Neighborhood organizations", "Housing organizations"] },
+  { category: "Philanthropy & Research Institutions", image: "/placeholder.svg", items: ["Foundations", "Universities", "Policy institutes"] },
+  { category: "Private Sector & Development", image: "/placeholder.svg", items: ["Real estate developers", "Economic impact analysts", "Incentives navigation"] },
 ];
 
 const inquiryTypes = ["General Inquiry", "Project Scoping", "Speaking Request", "Media", "Other"];
@@ -169,35 +169,31 @@ const Services = () => {
       {/* Client Types */}
       <section className="py-28 lg:py-36">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <img
-                src={communityImg}
-                alt="Collaborative planning session with community stakeholders"
-                className="w-full aspect-square object-cover rounded-2xl shadow-elevated"
-              />
-            </div>
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">Who We Work With</p>
-              <h2 className="font-display text-3xl text-foreground mb-10">
-                Client Types
-              </h2>
-              <div className="space-y-8">
-                {clientTypes.map((group) => (
-                  <div key={group.category}>
-                    <h3 className="font-display text-base text-foreground mb-3">{group.category}</h3>
-                    <div className="space-y-2">
-                      {group.items.map((item) => (
-                        <div key={item} className="flex items-center gap-3 py-1.5">
-                          <ArrowRight size={13} className="text-terracotta shrink-0" />
-                          <span className="text-muted-foreground text-sm">{item}</span>
-                        </div>
-                      ))}
-                    </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">Who We Work With</p>
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16">
+            Client Types
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {clientTypes.map((group) => (
+              <div key={group.category} className="bg-card rounded-2xl shadow-card overflow-hidden">
+                <img
+                  src={group.image}
+                  alt={`${group.category} project showcase`}
+                  className="w-full aspect-[16/9] object-cover"
+                />
+                <div className="p-8">
+                  <h3 className="font-display text-lg text-foreground mb-4">{group.category}</h3>
+                  <div className="space-y-2.5">
+                    {group.items.map((item) => (
+                      <div key={item} className="flex items-center gap-3">
+                        <ArrowRight size={13} className="text-terracotta shrink-0" />
+                        <span className="text-muted-foreground text-sm">{item}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
