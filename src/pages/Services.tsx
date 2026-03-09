@@ -54,9 +54,10 @@ const Services = () => {
   });
 
   useEffect(() => {
-    if (location.hash === "#contact") {
+    const id = location.hash.replace("#", "");
+    if (id) {
       setTimeout(() => {
-        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
   }, [location]);
