@@ -74,7 +74,7 @@ const Index = () => {
         <div className="absolute inset-0">
           <img
             src={heroCityscape}
-            alt="City skyline at golden hour representing economic development and urban planning"
+            alt="Chicago skyline from Montrose Harbor — photo by John Picken, CC BY 2.0"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/65 to-primary/30" />
