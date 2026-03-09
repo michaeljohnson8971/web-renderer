@@ -7,7 +7,7 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: "Home", path: "/" },
+    { label: "Home", path: "/home" },
     { label: "About", path: "/about" },
     { label: "Work & Services", path: "/services" },
   ];
@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/60">
       <div className="container mx-auto flex items-center justify-between h-18 px-6 lg:px-8 py-4">
-        <Link to="/" className="flex items-baseline gap-1 group">
+        <Link to="/home" className="flex items-baseline gap-1 group">
           <span className="font-display text-2xl tracking-[0.04em] text-foreground group-hover:text-terracotta transition-colors">
             DABL
           </span>

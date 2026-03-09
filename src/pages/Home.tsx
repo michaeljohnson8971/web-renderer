@@ -66,7 +66,7 @@ const experiences = [
   },
 ];
 
-const Index = () => {
+const Home = () => {
   return (
     <main>
       {/* Hero */}
@@ -226,4 +226,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;
