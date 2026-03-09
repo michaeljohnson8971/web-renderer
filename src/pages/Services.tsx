@@ -141,24 +141,24 @@ const Services = () => {
       </section>
 
       {/* Methodology */}
-      <section className="py-28 lg:py-36 bg-primary">
+      <section className="py-14 lg:py-16 bg-primary">
         <div className="container mx-auto px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">Approach</p>
-          <h2 className="font-display text-3xl md:text-4xl text-primary-foreground mb-16">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-3">Approach</p>
+          <h2 className="font-display text-xl md:text-2xl text-primary-foreground mb-8">
             Methodology
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {methodology.map((step) => (
-              <div key={step.step} className="relative bg-primary-foreground/5 p-8 rounded-2xl">
-                <span className="font-display text-5xl font-bold text-primary-foreground/20 absolute top-4 right-5">
+              <div key={step.step} className="relative bg-primary-foreground/5 p-4 rounded-xl">
+                <span className="font-display text-3xl font-bold text-primary-foreground/20 absolute top-2 right-3">
                   {step.step}
                 </span>
-                <div className="pt-8">
-                  <div className="w-11 h-11 rounded-xl bg-terracotta/15 flex items-center justify-center mb-5">
-                    <step.icon className="text-terracotta" size={20} strokeWidth={1.5} />
+                <div className="pt-4">
+                  <div className="w-8 h-8 rounded-lg bg-terracotta/15 flex items-center justify-center mb-3">
+                    <step.icon className="text-terracotta" size={14} strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-display text-lg text-primary-foreground mb-3">{step.title}</h3>
-                  <p className="text-primary-foreground/55 text-sm leading-relaxed">{step.description}</p>
+                  <h3 className="font-display text-sm text-primary-foreground mb-2">{step.title}</h3>
+                  <p className="text-primary-foreground/55 text-xs leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
