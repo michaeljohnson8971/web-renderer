@@ -128,7 +128,7 @@ const Home = () => {
       {/* Professional Overview */}
       <section className="py-7 lg:py-9">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta mb-5">About</p>
             <h2 className="font-display text-3xl md:text-4xl text-foreground leading-tight mb-8">
                DABL Studio
